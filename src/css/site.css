@@ -1,0 +1,237 @@
+
+.navbar {
+    background-color: #3F51B5;
+    color: white;
+}
+.navLabel {
+    padding-top: 7px;
+    text-align: right;
+}
+  
+  .button {
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: currentColor;
+    position: relative;
+    outline: none;
+    border: none;
+    display: inline-block;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 6px;
+    margin: 6px 8px;
+    line-height: 36px;
+    min-height: 36px;
+    background: transparent;
+    min-width: 104px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    overflow: hidden;
+    color: black;
+    box-shadow:none !important;
+    white-space: nowrap;
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.navButton{
+    background-color: white;
+    white-space: nowrap;
+    margin-top: 7px;
+}
+.dropdownButton {
+    background-color: #3F51B5;
+    color: white;
+    outline-width: 3px;
+    outline-color: white;
+    text-align: start;
+    
+}
+
+.dropdownButton:focus {
+    background-color: #3F51B5 ;
+    color: white !important ;
+}
+.dropdownButton:hover {
+    background-color: rgb(50, 65, 156);
+    color: white;
+}.dropdownButton:active {
+    background-color: rgb(50, 65, 156);
+    color: white;
+}
+.actionButton {
+    background: darkgray;
+    padding: 8px 20px 8px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+    border: 1px solid darkgray;
+}
+.actionButton:hover {
+    background: silver;
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+
+.actionButton:disabled {
+    background: rgb(240, 240, 240);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+}
+
+.panelStyle {
+    width: 900px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    min-height: 88px;
+    margin: 8px 0px;
+    box-shadow: 3px 3px darkgray;
+}
+
+.textStyle {
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    height: 45px;
+}
+
+.panelStyleSet {
+    width: 77%;
+    padding: 2px;
+}
+
+.searchStyle {
+    outline: none;
+    display: block;
+    width: 200px;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 10px;
+    height: 45px;
+  }
+
+  ul.checkbox   { 
+    margin: 0; 
+    padding: 0; 
+    margin-left: 20px; 
+    list-style: none; 
+  }
+
+form.checkbox {
+    border-color: rgba(255, 255, 255, 0.17);
+    border: 3px groove;
+    padding: 10px;
+}
+
+form.checkbox>label {
+    position: absolute;
+    display: block;
+	float: left;
+    top: -23px;
+	background: white;
+	padding: 0px 5px 0px 5px;
+	overflow: hidden;
+}
+
+input.checkbox {
+    position: absolute;
+    background-color: #fff;
+    border: 3px inset;
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+label.group-name {
+    float:left;
+    font-size: 1.5em;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    border: 1px inset;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: rgb(119, 119, 119);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
