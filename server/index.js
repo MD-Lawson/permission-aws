@@ -4,7 +4,7 @@ const app = express();
 var mongo = require('mongodb');
 var fetch = require('node-fetch');
 const apiURL = 'https://9wb0wt6jlf.execute-api.eu-west-2.amazonaws.com/test';
-var webServerPort = 3002;
+var webServerPort = 3001;
 //var MongoClient = require('mongodb').MongoClient;
 //var url = "mongodb://localhost:27017/mydb";
 
@@ -46,13 +46,13 @@ app.get('/api/featuresets/:applicationId', (req, res) => {
     return response.json();
   })
   .then(function(myJson) {
-    console.log(JSON.stringify(myJson));
+    //console.log(JSON.stringify(myJson));
     res.send(myJson.body);
   });
 });
 
 app.post('/api/features', (req, res) => {
-  console.log("POST received");
+  console.log("features POST received");
   console.log(req.body);
   
   fetch(apiURL + req.originalUrl, {
