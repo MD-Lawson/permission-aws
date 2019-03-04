@@ -83,8 +83,8 @@ app.post('/api/featuresets/save', (req, res) => {
   .catch(error => console.error('Error:', error));  
 })
 
-app.post('/api/featuresets/:featuresetid/savefeature', (req, res) => {
-  console.log("POST featuresets saved received");
+app.post('/api/featuresets/savefeature', (req, res) => {
+  console.log("POST featuresets savefeature received");
   //console.log(req.body);
   fetch(apiURL + req.originalUrl, {
     method: 'POST', // or 'PUT'
