@@ -45,7 +45,7 @@ export function postFeatureSetEdits(updatedFeatureSet) {
 
 export function saveFeatureSetFeature(featureSetFeature) {   
     return dispatch => {
-        axios.post(`/api/featuresets/`+ featureSetFeature.FeatureSetId + `/savefeature`, featureSetFeature).then(res => { 
+        axios.post(`/api/featuresets/savefeature`, featureSetFeature).then(res => { 
 
         })
     }
