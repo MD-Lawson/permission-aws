@@ -39,7 +39,7 @@ app.get('/api/applications', (req, res) => {
 
 })
 app.get('/api/featuresets/:applicationId', (req, res) => {
-  console.log("Request recieved")
+  //console.log("Request recieved")
   fetch(apiURL + req.originalUrl)
   .then(function(response) {
     //console.log(response.body);
@@ -52,9 +52,8 @@ app.get('/api/featuresets/:applicationId', (req, res) => {
 });
 
 app.post('/api/features', (req, res) => {
-  console.log("features POST received");
-  console.log(req.body);
-  
+  console.log("POST features received");
+  //console.log(req.body);
   fetch(apiURL + req.originalUrl, {
     method: 'POST', // or 'PUT'
     body: JSON.stringify(req.body), // data can be `string` or {object}!
@@ -64,7 +63,38 @@ app.post('/api/features', (req, res) => {
   }).then(response => response.json())
   .then(response => console.log('Success:', response))
   .catch(error => console.error('Error:', error));
-  
+})
+
+app.post('/api/featuresets/save', (req, res) => {
+  console.log("POST features set received");
+  //console.log(req.body);
+  var noFeatures = {...req.body};
+  delete noFeatures.Features;
+  //noFeatures.FeatureNum = [1, 2];
+  //console.log(noFeatures);
+  fetch(apiURL + req.originalUrl, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify(noFeatures), // data can be `string` or {object}!
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }).then(response => response.json())
+  .then(response => console.log('Success:', response))
+  .catch(error => console.error('Error:', error));  
+})
+
+app.post('/api/featuresets/:featuresetid/savefeature', (req, res) => {
+  console.log("POST featuresets saved received");
+  //console.log(req.body);
+  fetch(apiURL + req.originalUrl, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify(req.body), // data can be `string` or {object}!
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }).then(response => response.json())
+  .then(response => console.log('Success:', response))
+  .catch(error => console.error('Error:', error));  
 })
 
 app.get('*', (req, res) => {
