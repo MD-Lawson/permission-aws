@@ -78,8 +78,8 @@ class addFeatureSet extends React.Component {
                             <div className="col-sm-4 pull-right">
                                 <div>
 
-                                <Link to="/featureSets"><button className="saveButton" onClick={this.save} disabled={!this.state.saveEnabled}>Save</button></Link>
-                                    <button className="saveButton" onClick={this.cancel}>Cancel</button>
+                                <Link to="/featureSets"><button className="actionButton" onClick={this.save} disabled={!this.state.saveEnabled}>Save</button></Link>
+                                    <button className="actionButton" onClick={this.cancel}>Cancel</button>
 
 
 
