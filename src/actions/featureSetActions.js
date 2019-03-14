@@ -27,9 +27,10 @@ export function fetchFeatureSets(path) {
 }
 
 export function postFeatureSets(newFeatureSet) {
+    console.log(newFeatureSet);
     return dispatch => {
-        axios.post(`/api/featuresets/save`, newFeatureSet).then(res => {
-
+        axios.post(`/api/featuresets/savenew`, newFeatureSet).then(res => {
+            console.log(res);
         })
     }
 }
@@ -38,7 +39,7 @@ export function postFeatureSetEdits(updatedFeatureSet) {
     
     return dispatch => {
         axios.post(`/api/featuresets/save`, updatedFeatureSet).then(res => {
-
+            console.log(res);
         })
     }
 }
@@ -46,7 +47,7 @@ export function postFeatureSetEdits(updatedFeatureSet) {
 export function saveFeatureSetFeature(featureSetFeature) {   
     return dispatch => {
         axios.post(`/api/featuresets/savefeature`, featureSetFeature).then(res => { 
-
+            console.log(res);
         })
     }
 }

@@ -79,6 +79,23 @@ app.post('/api/featuresets/save', (req, res) => {
       'Content-Type': 'application/json'
     }
   }).then(response => response.json())
+  .then(response => {
+      res.sendStatus(200);
+    console.log('Success:', response)}
+    )
+  .catch(error => console.error('Error:', error));  
+})
+
+app.post('/api/featuresets/savenew', (req, res) => {
+  console.log("POST new features set received");
+  console.log(req.body);
+  fetch(apiURL + req.originalUrl, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify(req.body), // data can be `string` or {object}!
+    headers:{
+      'Content-Type': 'application/json'
+    }
+  }).then(response => response.json())
   .then(response => console.log('Success:', response))
   .catch(error => console.error('Error:', error));  
 })
@@ -93,7 +110,10 @@ app.post('/api/featuresets/savefeature', (req, res) => {
       'Content-Type': 'application/json'
     }
   }).then(response => response.json())
-  .then(response => console.log('Success:', response))
+  .then(function(response) {
+    res.sendStatus(200);
+    console.log(response);
+  })
   .catch(error => console.error('Error:', error));  
 })
 

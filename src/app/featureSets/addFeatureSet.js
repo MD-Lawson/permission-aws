@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import NavBar from '../../components/navbar.js';
 import { connect } from "react-redux";
 import {postFeatureSets} from "../../actions/featureSetActions";
+import uuidv1 from "uuid/v1";
 
 class addFeatureSet extends React.Component {
     constructor() {
@@ -25,6 +26,7 @@ class addFeatureSet extends React.Component {
     save() {
         
         var newFeatureSet = {
+            FeatureSetId: uuidv1(),
             Name: this.state.nameValue,
             Description: this.state.descriptionValue,
             Features: [],
