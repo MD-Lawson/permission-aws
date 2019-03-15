@@ -22,3 +22,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/app/featureSets/featureSetsPage.test.js
+src/app/feature/features.test.js
+src/app/feature/featureCard.test.js
+src/actions/featureSetActions.test.js
+src/app/featureSets/featureSet.test.js
+src/actions/featuresActions.test.js
